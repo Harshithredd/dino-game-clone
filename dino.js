@@ -16,8 +16,8 @@ export function setupDion(){
     dinoFrame=0; 
     yVelocity=0;
     setCustomProperty(dinoElement,"--bottom",0);
-    document.removeEventListener("keydown",onJump);
-    document.addEventListener("keydown",onJump);
+    document.removeEventListener("click",onJump);
+    document.addEventListener("click",onJump);
 }
 export function updateDino(timeDiff,speedScale){
     handelRunning(timeDiff,speedScale); 
@@ -47,7 +47,7 @@ function handelJumping(timeDiff){
 } 
 
 function onJump(e){
-     if(e.code !== "Space" ||  isJumping){
+     if(  isJumping){
         return;
      }
      yVelocity = JUMP_SPEED;   
