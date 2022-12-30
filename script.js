@@ -13,7 +13,7 @@ const scoreElement = document.querySelector('[data-score]')
 scaleWindow();
 
 window.addEventListener("resize",scaleWindow);
-document.addEventListener("click",handelStart,{once:true});
+document.addEventListener("keydown",handelStart,{once:true});
 
 let lastTime;
 let speedScale;
@@ -88,7 +88,7 @@ function isCollusion(rect1,rect2){
 function handelGameOver(){
     setDinoLoose();
     setTimeout(()=>{
-        document.addEventListener("click",handelStart,{once: true});
+        document.addEventListener("keydown",handelStart,{once: true});
         startElement.classList.remove("hide");
     },300)
  }
