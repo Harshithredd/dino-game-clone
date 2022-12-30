@@ -15,6 +15,7 @@ export function setupDion(){
     currentFrameTime=0;
     dinoFrame=0; 
     yVelocity=0;
+    setCustomProperty(dinoElement,"--bottom",0);
     document.removeEventListener("keydown",onJump);
     document.addEventListener("keydown",onJump);
 }

@@ -90,5 +90,5 @@ function handelGameOver(){
     setTimeout(()=>{
         document.addEventListener("keydown",handelStart,{once: true});
         startElement.classList.remove("hide");
-    },100)
+    },300)
  }
